@@ -1,0 +1,47 @@
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class Ex211 {
+    public static void main(String [] args){
+        Set<String> set1 = new HashSet<>();
+        set1.add("George");
+        set1.add("Jim");
+        set1.add("John");
+        set1.add("Blake");
+        set1.add("Kevin");
+        set1.add("Michail");
+
+        Set <String> set2 = new HashSet<>();
+        set2.add("George");
+        set2.add("Katie");
+        set2.add("Kevin");
+        set2.add("Michail");
+        set2.add("Royan");
+
+
+        Set<String> union = new HashSet<>();
+        union.addAll(set2);
+        union.addAll(set1);
+
+        Set<String> dif = new HashSet<>();
+        dif.addAll(set1);
+        dif.removeAll(set2);
+
+        Set<String> inter = new HashSet<>();
+        inter.addAll(set1);
+        inter.retainAll(set2);
+
+        System.out.println("First set: " + set1);
+        System.out.println("Second set: " + set2);
+        System.out.println("Union set1 and set2: " + union);
+        System.out.println("Difference set1 and set2: "  + dif);
+        System.out.println("Intersection set1 and set2: " + inter);
+
+
+
+
+
+    }
+
+}
